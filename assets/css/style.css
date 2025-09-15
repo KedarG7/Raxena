@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* universal */
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:Montserrat,sans-serif;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+
+/* universal end */
+
+/* topbar start */
+.topbar{
+    width:100%;
+    height:48px;
+    background-color:#081528;
+    color:white;
+    display:flex;
+    justify-content:right;
+    align-items:center; 
+    font-family:sans-serif;
+    font-size:13px;
+}
+.topbar ul .xx{
+color:#fe982f;
+width:32px;
+height:32px;
+
+}
+.topbar ul{
+    width:40%;
+    display:flex;
+    gap:32px;
+}
+.topbar ul li  a{
+    color:white;
+}
+
+/* topbar end */
+
+/* navbar start */
+.nav{
+    width:100%;
+    height:64px;
+    background-color:#fe982f;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0px 160px;
+    position:relative;
+    z-index:1;
+    position:sticky;
+    top:0px;
+}
+
+.nav .site_branding img{
+    /* scale:1; */
+    background-color:white;
+    
+}
+.nav ul{
+    display:flex;
+    gap:24px;
+    align-items:center;
+   
+}
+.nav .site_branding{
+    width:194px;
+    height:120px;
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+}
+.nav ul li a{
+    color:white;
+}
+.nav  .abc{
+    color:white;
+    width:32px;
+    height:32px;
+    border:2px solid white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:4px;
+    transition:all 0.7s;
+}
+.nav .ab{
+    color:white;
+    cursor:pointer;
+    transition:all 0.3s;
+}
+.nav .ab:hover{
+    color:whitesmoke;
+    transform:translateY(-4px);
+}
+.nav .abc:hover{
+    color:#fe982f;
+    background-color:white;
+    cursor:pointer;
+    transform:translate(2px,2px);
+}
+.nav ul li{
+  
+    position:relative;
+}
+.nav ul li::after{
+    content:" ";
+    height:2px;
+    width:0%;
+    border-radius:8px;
+    border:0px white solid;
+    background-color:white;
+    position:absolute;
+    bottom:-4px;
+    left:0px;
+    transition:all 0.4s;  
+}
+.nav ul li:hover::after{
+    border:1px white solid;
+    width:64%;
+    height:2px;
+}
+/* navbar end */
+
+
+/* hero section start */
+.hero{
+    height:90vh;
+    width:100%;
+    background-image:url('../img/mainbg-003.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    justify-content: space-between;
+    position:relative;
+    overflow:hidden;
+    
+   
+}
+.hero .boygirl{
+width:45%;
+position:absolute;
+bottom:0px;
+right:0px;
+transition: all 0.7s;
+animation:forwards 1 1.5s slide;
+}
+@keyframes slide {
+    from{
+        bottom:0px;
+        right:-50px;
+    }
+    to{
+    bottom:0px;
+    right:0px;  
+    }
+}
+.content{
+    width:65%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:left;
+    color:white;
+    padding:0px 120px;
+    position:relative;
+}
+.highlight{
+    color:#fe982f;
+}
+.content h3{
+    font-weight:500;
+    position:absolute;
+    left:190px;
+    top:100px;
+    
+}
+.content h3::before{
+    
+    content:" ";
+    height:2px;
+    width:50px;
+   position:absolute;
+   background-color:#fe982f;
+   left:-60px;
+   top:10px;
+
+}
+.content h1{
+  
+    padding:10px 0px;
+    font-size:80px;
+}
+.content p{
+    width:80%;
+}
+
+.content p{
+    padding:20px 0px;
+    line-height:25px;
+}
+.buttons button{
+    padding:8px 24px;
+    margin:5px;
+}
+.buttons .button1{
+    background-color:#fe982f;
+    color:white;
+    border:transparent;
+    border-radius:4px;
+
+}
+.buttons .button2{
+    background-color:transparent;
+    color:white;
+    border:2px solid white;
+    border-radius:4px;
+
+}
+
+/* hero section end */
+.page1{
+    height:100vh;
+    width:100%;
+    background-color:white;
+    display:flex;
+    padding: 32px 160px;
+}
+.page1_content{
+    width:48%;
+    padding:32px;
+}
+.page1_content h4{
+color:#fe982f;
+font-weight:500;
+padding:8px 0px;
+}
+.page1_content p{
+padding:16px 0px;
+color:grey;
+}
+.page1_grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:16px;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:320px) and (max-width:425px) {
+ .topbar{
+    display:none;
+ }
+ 
+.nav ul {
+    display:none;
+}
+.nav{
+    padding:0px;  
+}
+.nav .site_branding{
+border-radius:0px;
+height:64px;
+width:425px;
+}
+.nav .site_branding img{
+    scale:0.7;
+}
+.hero{
+    height:40vh;
+    justify-content: center;
+}
+.hero .content{
+padding:8px;
+
+}
+.content h1{
+    font-size:25px;
+    
+  
+}
+.content{
+    width:100%;
+    align-items:center;
+    justify-content:center;
+}
+.content h3{
+    left: 69px;
+    top: 30px;
+    font-size: 12px;
+}
+.hero .boygirl{
+    display:none;
+}
+.content p{
+    display:none;
+}
+.hero{
+    width:100%;
+    background-size:auto 40vh;
+    background-position-y:top;
+}
+.content h3::before{
+    left:63px;
+    top:22px;
+    width:40px;
+}
+.buttons button{
+        padding: 6px 12px;
+    margin: 5px;
+    font-size: 8px;
+}
+ 
+}
